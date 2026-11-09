@@ -1,5 +1,4 @@
 # SPL-1
-# C Debugger for Linux ELF Binaries
 
 A C-based project focused on developing a debugger for Linux ELF binaries using `ptrace`.
 
@@ -8,7 +7,6 @@ A C-based project focused on developing a debugger for Linux ELF binaries using 
 This project is a C-based debugging program for Linux executable files. The project aims to develop a small, lightweight debugger from scratch to understand how programs can be controlled and inspected during execution. It will use Linux process-control mechanisms and the ELF executable format to provide basic debugging functionality. The final system will allow users to control program execution, set breakpoints, inspect registers and memory, and obtain basic information about functions and the program's execution flow.
 
 ## Features
-- Program Execution
 - Process Control
 - Single-Step Execution
 - Register & Memory Inspection
@@ -38,7 +36,7 @@ This project is a C-based debugging program for Linux executable files. The proj
 ## Project Progress
 
 - [**✓**] Learn the fundamentals of `ptrace`
-- [ ] Understand ELF structure and analysis
+- [**✓**] Understand ELF structure and analysis
 - [ ] Implement basic process tracing
 - [ ] Implement instruction-level stepping
 - [ ] Explore register inspection
