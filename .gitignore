@@ -1,1 +1,4 @@
 .DS_Store
+mydbg
+tests/loop
+*.o
