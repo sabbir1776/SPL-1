@@ -20,6 +20,8 @@ A C-based project focused on developing a debugger for Linux ELF binaries using 
 - **Compiler:** GCC
 - **Tools:** GDB, `readelf`
 
+**AI Assistant**: Claude, ChatGPT
+
 ## Learning Objectives
 
 - Understanding how Linux processes are created and executed.
@@ -33,11 +35,11 @@ A C-based project focused on developing a debugger for Linux ELF binaries using 
 
 - [**✓**] Learn the fundamentals of `ptrace`
 - [**✓**] Understand ELF structure and analysis
-- [ ] Implement basic process tracing
-- [ ] Implement instruction-level stepping
+- [**✓**] Implement basic process tracing
+- [**✓**] Implement instruction-level stepping
 - [ ] Explore register inspection
 - [ ] Develop additional debugging features
 
 ## Current Status
 
-Currently in the early development stage, moving from theoretical understanding to practical implementation.
+Currently in the raw coding state.
