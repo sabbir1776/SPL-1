@@ -1,29 +1,3 @@
-/*
- * mydbg.c - a simple debugger for C programs (Linux x86-64)
- *
- * Usage:   ./mydbg tests/yourfile.c
- *
- * What it does, in order:
- *   Step 1  scans your source for common mistakes (my own checks)
- *   Step 2  runs gcc with warnings on and explains the messages
- *   Step 3  builds your program and lets you run it under the debugger:
- *           - tells you WHERE and WHY it crashes (null pointer, divide by
- *             zero, double free, infinite recursion, infinite loop, ...)
- *           - breakpoints on lines or functions, stepping line by line,
- *             registers and memory
- *
- * How the running part works (the short version):
- *   fork()   -> a child process is created
- *   ptrace   -> the child asks the kernel "my parent may control me"
- *   exec     -> the child turns into your program, frozen at its first
- *               instruction
- *   A breakpoint is the byte 0xCC (the 'int3' instruction) written over the
- *   first byte of a line's machine code. When the CPU runs it, the kernel
- *   freezes your program and tells us. We put the original byte back, move
- *   the instruction pointer back by one, and the program is paused exactly
- *   at that line.
- */
-
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
