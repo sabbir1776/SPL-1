@@ -1,15 +1,10 @@
 CC     = gcc
-CFLAGS = -g -Wall -Wextra -O0
-
-all: mydbg tests/loop
+CFLAGS = -Wall -Wextra -O0 -g
 
 mydbg: src/mydbg.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-tests/loop: tests/loop.c
-	$(CC) -g -O0 -no-pie -o $@ $<
-
 clean:
-	rm -f mydbg tests/loop
+	rm -f mydbg
 
-.PHONY: all clean
+.PHONY: clean
